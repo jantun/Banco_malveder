@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Banco Malveder</title>
+  
+  <!-- Links externos -->
+  <link rel="stylesheet" href="deshboard.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Cabeçalho -->
+    <header class="header">
+      <div class="header-left">
+        <h1>Banco Malveder</h1>
+        <p id="nome-usuario">Olá, Bem-vindo!</p>
+      </div>
+    </header>
+
+    <!-- Resumo da Conta -->
+    <section class="resumo-conta">
+      <h2>Resumo da Conta</h2>
+      <div class="resumo-item">
+        <p><strong>Total de Despesas:</strong> R$ 1.500,00</p>
+      </div>
+      <div class="resumo-item">
+        <p><strong>Total de Transferências:</strong> R$ 3.000,00</p>
+      </div>
+      <div class="resumo-item saldo-atual">
+        <p>
+          <strong>Saldo Atual: </strong>
+          <span id="saldo">R$ ****</span>
+          <button class="olhinho" onclick="toggleSaldo()" aria-label="Exibir saldo">👁️</button>
+        </p>
+      </div>
+    </section>
+
+    <!-- Menu Centralizado -->
+    <nav class="menu-central">
+      <ul>
+        <li><a href="#" id="home-button">Início</a></li>
+        <li><a href="pix.html" id="pix-button">Pix</a></li>
+        <li><a href="cartao.html" id="cartao-button">Cartão de Crédito</a></li>
+      </ul>
+    </nav>
+
+    <!-- Gráfico -->
+    <section class="grafico-container">
+      <h2>Desempenho Financeiro</h2>
+      <canvas id="grafico" aria-label="Gráfico de desempenho financeiro"></canvas>
+    </section>
+
+    <!-- Extrato -->
+    <section class="extrato">
+      <h2>Últimas Transações</h2>
+      <ul id="lista-extrato">
+        <li>
+          <i class="fas fa-arrow-down" style="color: green;"></i> 
+          Pix recebido - <strong>R$ 1.000,00</strong> 
+          <span class="data-transacao">13/05/2025</span>
+        </li>
+        <li>
+          <i class="fas fa-file-invoice" style="color: #007BFF;"></i>
+          Pagamento de boleto - <strong>R$ 90,00</strong>
+          <span class="data-transacao">12/05/2025</span>
+        </li>
+        <li>
+          <i class="fas fa-arrow-up" style="color: red;"></i> 
+          Transferência enviada - <strong>R$ 150,00</strong>
+          <span class="data-transacao">10/05/2025</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Notificações -->
+    <section class="notificacoes">
+      <h2>Notificações</h2>
+      <ul>
+        <li>
+          <i class="fas fa-check-circle" style="color: green;"></i> 
+          Seu pagamento foi processado com sucesso!
+          <span class="data-notificacao">13/05/2025</span>
+        </li>
+        <li>
+          <i class="fas fa-credit-card" style="color: #007BFF;"></i> 
+          Fatura do cartão de crédito disponível.
+          <span class="data-notificacao">12/05/2025</span>
+        </li>
+        <li>
+          <i class="fas fa-bell" style="color: orange;"></i> 
+          Você recebeu um Pix de R$ 500,00!
+          <span class="data-notificacao">11/05/2025</span>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

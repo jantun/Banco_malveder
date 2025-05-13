@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartão de Crédito | Banco Malveder</title>
+
+  <!-- Links externos -->
+  <link rel="stylesheet" href="deshboard.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Cabeçalho -->
+    <header class="header">
+      <div class="header-left">
+        <h1>Banco Malveder</h1>
+        <p id="nome-usuario">Área do Cartão de Crédito</p>
+      </div>
+    </header>
+
+    <!-- Pagamento Cartão -->
+    <section class="pagamento-cartao">
+      <h3>Pagamento de Fatura do Cartão</h3>
+      <form id="form-cartao">
+        <div class="form-group">
+          <label for="cartao-value">Valor da Fatura (R$):</label>
+          <input type="number" id="cartao-value" placeholder="Digite o valor" required>
+        </div>
+        <button type="submit" class="btn">Pagar Fatura</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts.js"></script>
+</body>
+</html>

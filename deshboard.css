@@ -1,0 +1,358 @@
+/* ===================================
+   RESET E CONFIGURAÇÕES BÁSICAS
+=================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================================
+   CABEÇALHO
+=================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 36px;
+  color: #000; /* Preto */
+}
+
+.header #nome-usuario {
+  font-size: 18px;
+  color: #333; /* Cinza escuro */
+}
+
+/* ===================================
+   RESUMO DA CONTA
+=================================== */
+.resumo-conta {
+  margin-bottom: 30px;
+}
+
+.resumo-conta h3 {
+  font-size: 24px;
+  color: #000; /* Preto */
+  margin-bottom: 20px;
+}
+
+.resumo-conta p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333; /* Cinza escuro */
+}
+
+.saldo-atual .olhinho {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  color: #000; /* Preto */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.saldo-atual .olhinho:hover {
+  transform: scale(1.2);
+  color: #555; /* Cinza mais claro */
+}
+
+/* ===================================
+   MENU CENTRALIZADO
+=================================== */
+.menu-central {
+  background-color: #000; /* Preto */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.menu-central ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.menu-central ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #444; /* Cinza médio */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-central ul li a:hover {
+  background-color: #222; /* Cinza escuro */
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.menu-central ul li a.active {
+  background-color: #ffffff; /* Branco */
+  color: #000; /* Preto */
+  font-weight: bold;
+}
+
+/* ===================================
+   BOTÕES
+=================================== */
+.btn {
+  display: inline-block;
+  background: #000; /* Preto */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: #333; /* Cinza escuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   EXTRATO
+=================================== */
+.extrato h2 {
+  font-size: 24px;
+  color: #000; /* Preto */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.extrato ul {
+  list-style: none;
+  padding: 0;
+}
+
+.extrato li {
+  background-color: #f9f9f9; /* Fundo claro */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #007BFF; /* Bordas coloridas */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extrato li i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.extrato li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-transacao {
+  font-size: 12px;
+  color: #888; /* Cinza claro */
+}
+
+/* ===================================
+   NOTIFICAÇÕES
+=================================== */
+.notificacoes h2 {
+  font-size: 24px;
+  color: #000; /* Preto */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.notificacoes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.notificacoes li {
+  background-color: #f9f9f9; /* Fundo claro */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 5px solid green;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notificacoes li i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.notificacoes li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.data-notificacao {
+  font-size: 12px;
+  color: #888; /* Cinza claro */
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+@media (max-width: 768px) {
+  .menu-central ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-central ul li {
+    margin-bottom: 10px;
+  }
+
+  .dashboard-container {
+    padding: 15px;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}.pagamento {
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #f9f9f9; /* Cinza muito claro */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.pagamento h2 {
+  font-size: 24px;
+  color: #000; /* Preto */
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.pagamento-pix,
+.pagamento-cartao {
+  margin-bottom: 20px;
+}
+
+.pagamento-pix h3,
+.pagamento-cartao h3 {
+  font-size: 20px;
+  color: #333; /* Cinza escuro */
+  margin-bottom: 15px;
+  border-bottom: 2px solid #ddd; /* Separador visual */
+  padding-bottom: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #555; /* Cinza médio */
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc; /* Cinza claro */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #007bff; /* Azul */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-group input::placeholder {
+  color: #aaa; /* Cinza claro */
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background-color: #007bff; /* Azul */
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Azul escuro */
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pagamento-pix .btn,
+.pagamento-cartao .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .pagamento {
+    padding: 20px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
