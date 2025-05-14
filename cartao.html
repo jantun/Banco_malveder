@@ -19,6 +19,11 @@
       </div>
     </header>
 
+    <!-- Botão Voltar à Página Principal -->
+    <div style="margin-bottom: 20px;">
+      <button id="voltar-principal" class="btn">Voltar à Página Principal</button>
+    </div>
+
     <!-- Pagamento Cartão -->
     <section class="pagamento-cartao">
       <h3>Pagamento de Fatura do Cartão</h3>
@@ -31,9 +36,37 @@
       </form>
     </section>
 
+    <!-- Comprovante de Pagamento -->
+    <section id="comprovante" style="display: none; margin-top: 20px;">
+      <h3>Comprovante de Pagamento</h3>
+      <p><strong>Valor Pago:</strong> R$ <span id="comprovante-valor"></span></p>
+      <p><strong>Status:</strong> Pagamento realizado com sucesso!</p>
+    </section>
+
   </div>
 
   <!-- Scripts -->
-  <script src="scripts.js"></script>
+  <script>
+    // Adiciona funcionalidade ao botão "Voltar à Página Principal"
+    document.getElementById('voltar-principal').addEventListener('click', function() {
+      window.location.href = 'deshboard.html'; // Redireciona para a página principal
+    });
+
+    document.getElementById('form-cartao').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Captura o valor inserido no formulário
+      const valorFatura = document.getElementById('cartao-value').value;
+
+      // Exibe os dados no comprovante
+      document.getElementById('comprovante-valor').textContent = parseFloat(valorFatura).toFixed(2);
+
+      // Mostra o comprovante
+      document.getElementById('comprovante').style.display = 'block';
+
+      // Oculta o formulário
+      document.getElementById('form-cartao').style.display = 'none';
+    });
+  </script>
 </body>
 </html>

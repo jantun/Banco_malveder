@@ -10,7 +10,7 @@
 <body>
   <div class="form-container">
     <h2>Banco Malveder</h2>
-    <form action="#">
+    <form id="cadastro-form">
       <label for="cpf">CPF</label>
       <input type="text" id="cpf" placeholder="Digite seu CPF" required>
       
@@ -32,5 +32,17 @@
       <p>Já tem uma conta? <a href="login.html">Faça login aqui</a></p>
     </div>
   </div>
+
+  <script>
+    document.getElementById('cadastro-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Impede o envio padrão do formulário
+
+      // Exibe uma mensagem de sucesso
+      alert('Cadastro realizado com sucesso! Agora você pode fazer login.');
+
+      // Redireciona para a página de login
+      window.location.href = 'login.html';
+    });
+  </script>
 </body>
 </html>
